@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Dolittle. All rights reserved.
+ *  Licensed under the MIT License. See LICENSE in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package dolittle.timeseries.fabric.datapoints.storage;
+
+option csharp_namespace = "Dolittle.TimeSeries.Fabric.DataPoints.Storage";
+option go_package = "go.dolittle.io/timeseries/fadatapoints/storage/fabric";
+
+
+message StorageRequest {
+    bytes timeseriesId = 1;
+    double interval = 2;
+    double retention = 3;
+}
+
+// Represents the service for requesting storage of timeseries
+service Store {
+    rpc Connect(google.protobuf.Empty) returns (stream StorageRequest) {}
+}
