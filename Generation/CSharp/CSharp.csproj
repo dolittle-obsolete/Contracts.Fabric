@@ -3,7 +3,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <AssemblyName>Dolittle.TimeSeries.Runtime.Contracts</AssemblyName>
+        <AssemblyName>Dolittle.TimeSeries.Fabric.Contracts</AssemblyName>
         <DolittleProtoProject>../../Source</DolittleProtoProject>
         <DolittleProtoRoot>../../Source</DolittleProtoRoot>
     </PropertyGroup>
